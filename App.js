@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Home from "./src/screens/Home";
+import BottomNavigation from "./src/navigation/BottomNavigation";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Home />
+      {/*<Text>Mudi</Text>*/}
       <StatusBar style="auto" />
     </View>
   );
