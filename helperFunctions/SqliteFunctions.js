@@ -12,6 +12,6 @@ export const openDatabase = () => {
         };
     }
 
-    const db = SQLite.openDatabase("db.db");
+    const db = SQLite.openDatabase("finances.db");
     return db;
 }
