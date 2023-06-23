@@ -15,7 +15,7 @@ const BalanceCard = ({balance="0", income="0", expenditure="0"}) => {
                 </View>
                 <View>
                     <Text style={styles.labelText}>Expenses</Text>
-                    <Text style={styles.incomeExpensesText}>${expenditure}</Text>
+                    <Text style={styles.incomeExpensesText}>${-1 * expenditure}</Text>
                 </View>
             </View>
         </View>

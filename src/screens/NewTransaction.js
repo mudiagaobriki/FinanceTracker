@@ -52,9 +52,13 @@ const NewTransaction = () => {
             return;
         }
 
+        let updatedAmount = amount
+
+        if (type === "expenses") updatedAmount = -1 * amount
+
         db.transaction(
             (tx) => {
-                tx.executeSql("insert into items (name, value, type, transactionDate) values (?,?,?,?)", [name, amount, type, transactionDate?.toString()]);
+                tx.executeSql("insert into items (name, value, type, transactionDate) values (?,?,?,?)", [name, updatedAmount, type, transactionDate?.toString()]);
                 tx.executeSql("select * from items", [], (_, { rows }) =>{
                     console.log(JSON.stringify(rows))
                     alert("Transaction Added Successfully")

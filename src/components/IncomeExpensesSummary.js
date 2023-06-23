@@ -29,7 +29,7 @@ const IncomeExpensesSummary = ({income, expenditure, incomeCount,expenditureCoun
                 <View style={styles.itemContainer}>
                     <View>
                         <Text style={styles.labelText}>Expenses</Text>
-                        <Text style={styles.valuesText}>${expenditure}</Text>
+                        <Text style={styles.valuesText}>${-1 * expenditure}</Text>
                     </View>
                 </View>
             </View>

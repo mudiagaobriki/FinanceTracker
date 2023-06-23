@@ -15,7 +15,6 @@ const TransactionItem = ({type, name, amount, date, time}) => {
                 </View>
             </View>
             <Text style={type==="income"? styles.incomeText: styles.expenseText}>
-                {type !== "income"? "-": ""}
                 {amount}
             </Text>
         </View>
